@@ -53,6 +53,8 @@ And that's it! You have infinite power! You just start a Termux, start pulseaudi
 3. you can swipe left on the termux special buttons to access the thing, you'll figure it out. I don't know how to describe it!
 4. Maybe install the `termux:styling` app for changing fonts and colors.
 5. In fx/ghost-commander you can add the termux directory as a storage. That way you can browse your termux and lunix files and copy them back and forth with android.
+6. Volume-up+1-0 is F1-F10
+7. Volume-up+k show/hide the extra buttons
 
 ###### If you're a power user, consider trying void instead of fedora. I think it would be smaller in size, but I'm too lazy to configure it right!
 💜
