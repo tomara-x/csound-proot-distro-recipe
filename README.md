@@ -31,7 +31,7 @@ proot-distro install fedora
 
 7. let's update and install stuff (you need the update command at first)
 ```
-dnf update
+dnf up
 #Those are just the packages I need. You might want different stuff.
 dnf install csound vim git netcat man man-pages bash-completion
 ```
