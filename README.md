@@ -1,5 +1,6 @@
 
 # Csound on Void proot on Termux on Android
+Requires around 700MB of space and Android 7+
 
 1. Install termux (from [fdroid](https://f-droid.org/))
 2. Execute `pkg install pulseaudio proot-distro`
@@ -71,7 +72,7 @@ PULSE_SERVER=127.0.0.1
 
 And that's it! You have infinite power! You just start a Termux, start pulseaudio, and then login in fedora.
 
-### Notes:
+# Notes:
 1. You might wanna look into `~/.termux/termux.properties`
 2. Pinch in and out to change font size!
 3. you can swipe left on the termux special buttons to access the thing, you'll figure it out. I don't know how to describe it!
