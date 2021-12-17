@@ -1,3 +1,27 @@
+
+# Csound on Void proot on Termux on Android
+
+1. Install termux (from [fdroid](https://f-droid.org/))
+2. Execute `pkg install pulseaudio proot-distro`
+3. In `~/.bashrc` file add these aliases: (logout (ctrl+d) and relaunch termux after adding them)
+```
+#to start pulseaudio on termux which will receive the audio from void use the command 'pls'
+alias pls='pulseaudio --start --exit-idle-time=-1 && pacmd load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1'
+
+#to run void with the same home folder of termux and in isolation from the rest of the system you can use the command 'void'
+alias void='proot-distro login void --termux-home --isolated'
+
+# to run the 2 commands (starting pulseaudio and logging into fedora) in one command
+alias pvoid='pls && void'
+
+# not useful for termux but since we log into void with the same home directory this will be read by void
+PULSE_SERVER=127.0.0.1
+```
+4. Install void by executing `proot-distro install void` and then clear cache `proot-distro clear-cache`
+5. Log into void using the alias `void`
+6. update everything and install our toys: `xbps-install -Su csound vim git netcat bash-completion alsa-utils alsa-plugins-pulseaudio`
+7. Optional. Install [csound-vim](https://github.com/luisjure/csound-vim)
+
 # Csound on Fedora proot on Termux on Android
 
 This will take around 1GB of space. And sadly this requires Android 7 or higher.
@@ -45,7 +69,7 @@ PULSE_SERVER=127.0.0.1
 
 10. Logout of fedora (ctrl+d) and execute `proot-distro clear-cache`
 
-And that's it! You have infinite power! You just start a Termux, start pulseaudio, and then login in fedora. (the sessions thing is very powerful! try it! swipe right from the left edge of the screen.)
+And that's it! You have infinite power! You just start a Termux, start pulseaudio, and then login in fedora.
 
 ### Notes:
 1. You might wanna look into `~/.termux/termux.properties`
@@ -55,6 +79,6 @@ And that's it! You have infinite power! You just start a Termux, start pulseaudi
 5. In fx/ghost-commander you can add the termux directory as a storage. That way you can browse your termux and lunix files and copy them back and forth with android.
 6. Volume-up+1-0 is F1-F10
 7. Volume-up+k show/hide the extra buttons
+8. the sessions thing is very powerful! try it! swipe right from the left edge of the screen.
 
-###### If you're a power user, consider trying void instead of fedora. I think it would be smaller in size, but I'm too lazy to configure it right!
 💜
