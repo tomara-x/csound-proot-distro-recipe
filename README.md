@@ -12,7 +12,7 @@ alias pls='pulseaudio --start --exit-idle-time=-1 && pacmd load-module module-na
 #to run void with the same home folder of termux and in isolation from the rest of the system you can use the command 'void'
 alias void='proot-distro login void --termux-home --isolated'
 
-# to run the 2 commands (starting pulseaudio and logging into fedora) in one command
+# to run the 2 commands (starting pulseaudio and logging into void) in one command
 alias pvoid='pls && void'
 
 # not useful for termux but since we log into void with the same home directory this will be read by void
