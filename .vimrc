@@ -11,6 +11,9 @@
 "disable folding
 set nofoldenable
 
+:set nowrap
+:set sidescroll=5
+
 "disable csound folding
 autocmd Syntax csound setlocal foldmethod=manual
 "just disable autofolding
