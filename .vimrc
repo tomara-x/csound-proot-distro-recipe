@@ -34,4 +34,25 @@ set incsearch
 
 "show command as it's being typed
 set showcmd
+"possible commands menu
+set wildmenu
+
+"might wanna play with this normal mode map vs map stuff later
+"map f5 to save file and switch to window 1
+:noremap <F5> :up <CR> :1winc w <CR>
+" f6 = save file, start term window
+:noremap <F6> :up <CR> :to term<CR>
+
+"csound macros
+" saves present file, compiles with flags in options
+:noremap <F8> :up <CR> :!csound "%:p" <CR>
+" same but returns to vim
+:noremap <F9> :up <CR> :!csound "%:p" <CR> <CR>
+
+" saves present file, compiles and writes output to file, returns to vim
+:noremap <F10> :up <CR> :!csound -W -d -o "%:p:r.wav" "%:p" <CR> <CR>
+" saves present file, compiles and writes output to file, stays in console (for debugging) 
+:noremap <F11> :up <CR> :!csound -W -d -o "%:p:r.wav" "%:p" <CR>
+" plays last compiled file
+:noremap <F12> :!aplay "%:p:r.wav" <CR><CR>
 
