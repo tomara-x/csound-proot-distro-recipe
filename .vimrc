@@ -19,6 +19,7 @@ autocmd Syntax csound setlocal foldmethod=manual
 "just disable autofolding
 "autocmd Syntax csound normal zR
 
+"csound syntax colors
 ":hi Type         ctermfg=3
 ":hi Special      ctermfg=6
 hi csComment  	ctermfg=2
